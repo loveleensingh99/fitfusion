@@ -13,6 +13,10 @@ body {
   width: 0px;
 }
 
+a{
+  text-decoration: none;
+}
+
 .right-arrow,
 .left-arrow {
   cursor: pointer;

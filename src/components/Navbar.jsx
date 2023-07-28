@@ -1,7 +1,7 @@
 import React from "react";
 
 import Logo from "../assets/images/Logo.png";
-import { Stack } from "@mui/material";
+import { Stack, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
@@ -15,12 +15,34 @@ const Navbar = () => {
           justifyContent: "none",
         }}
       >
-        <Link to="/">
-          <img
-            src={Logo}
-            alt="Logo"
-            style={{ width: "48px", height: "48px", margin: "0 20px" }}
-          />
+        <Link to="/" >
+          <Stack
+            gap="40px"
+            sx={{ alignItems: "center" }}
+            flexWrap="wrap"
+            px="40px"
+            pt="24px"
+            justifyContent={"center"}
+            direction="row"
+          >
+            <img
+              src={Logo}
+              alt="logo"
+              style={{ width: "48px", height: "48px" }}
+            />
+            <Typography
+              variant="h5"
+              sx={{
+                fontSize: { lg: "28px", xs: "20px" },
+                fontWeight: "700",
+                textDecoration: "none",
+              }}
+              textAlign="center"
+              color="#FF2625"
+            >
+              FitFusion
+            </Typography>
+          </Stack>
         </Link>
 
         <Stack

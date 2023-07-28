@@ -11,7 +11,7 @@ const Home = () => {
     // useState();
     <Box>
       <HeroBanner />
-      <SearchExercises
+      {/* <SearchExercises
         setExercises={setExercises}
         bodyPart={bodyPart}
         setBodyPart={setBodyPart}
@@ -19,8 +19,8 @@ const Home = () => {
       <Exercises
         setExercises={setExercises}
         bodyPart={bodyPart}
-        setBodyPart={setBodyPart}
-      />
+        exercises={exercises}
+      /> */}
     </Box>
   );
 };

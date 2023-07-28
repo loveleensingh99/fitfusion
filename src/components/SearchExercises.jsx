@@ -10,9 +10,12 @@ import React, { useEffect, useState } from "react";
 import { exerciseOptions, fetchMyData } from "../utils/fetchData";
 import HorizontalScroll from "./HorizontalScroll";
 
-export default function SearchExercises({ bodyPart, setBodyPart }) {
+export default function SearchExercises({
+  bodyPart,
+  setBodyPart,
+  setExercises,
+}) {
   const [search, setSearch] = useState("");
-  const [exercises, setExercises] = useState([]);
   const [bodyParts, setBodyParts] = useState([]);
 
   useEffect(() => {
@@ -98,6 +101,7 @@ export default function SearchExercises({ bodyPart, setBodyPart }) {
           bodyParts
           setBodyPart={setBodyPart}
           bodyPart={bodyPart}
+        
         />
       </Box>
     </Stack>

@@ -15,6 +15,7 @@ function App() {
       </Box>
       <Routes>
         <Route path="/" element={<Home />}></Route>
+
         <Route path="/exercise/:id" element={<ExerciseDetail />}></Route>
       </Routes>
       {/* <AA /> */}

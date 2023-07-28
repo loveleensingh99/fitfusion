@@ -35,7 +35,7 @@ export default function HeroBanner() {
       </Button>
       <Typography
         fontWeight={600}
-        fontSize="200px"
+        fontSize="150px"
         color="#ff2625"
         sx={{ opacity: 0.1, display: { lg: "block", xs: "none" } }}
       >
