@@ -9,7 +9,6 @@ import ExerciseCard from "./ExerciseCard";
 const LeftArrow = () => {
   const { scrollPrev } = useContext(VisibilityContext);
 
-  console.log("Left Arrow Clicked");
   return (
     <Typography onClick={() => scrollPrev()} className="right-arrow">
       <img src={LeftArrowIcon} alt="right-arrow" />
@@ -34,22 +33,30 @@ const HorizontalScrollbar = ({
   bodyPart,
   isBodyParts,
 }) => (
-  <ScrollMenu LeftArrow={LeftArrow} RightArrow={RightArrow}>
-    {data.map((item) => (
-      <Box
-        key={item.id || item}
-        itemId={item.id || item}
-        title={item.id || item}
-        m="0 40px"
-      >
-        {bodyParts ? (
-          <BodyPart item={item} setBodyPart={setBodyPart} bodyPart={bodyPart} />
-        ) : (
-          <ExerciseCard exercises={item} />
-        )}
-      </Box>
-    ))}
-  </ScrollMenu>
+  <div className="horizontal-scrollbar-container">
+    {" "}
+    {/* Added a wrapping div with the container class */}
+    <ScrollMenu LeftArrow={LeftArrow} RightArrow={RightArrow}>
+      {data.map((item) => (
+        <Box
+          key={item.id || item}
+          itemId={item.id || item}
+          title={item.id || item}
+          m="0 40px"
+        >
+          {bodyParts ? (
+            <BodyPart
+              item={item}
+              setBodyPart={setBodyPart}
+              bodyPart={bodyPart}
+            />
+          ) : (
+            <ExerciseCard exercises={item} />
+          )}
+        </Box>
+      ))}
+    </ScrollMenu>
+  </div>
 );
 
 export default HorizontalScrollbar;

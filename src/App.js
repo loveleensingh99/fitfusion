@@ -18,7 +18,6 @@ function App() {
 
         <Route path="/exercise/:id" element={<ExerciseDetail />}></Route>
       </Routes>
-      {/* <AA /> */}
       <Footer />
     </>
   );

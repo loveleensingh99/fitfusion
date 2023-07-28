@@ -13,8 +13,13 @@ body {
   width: 0px;
 }
 
-a{
+a {
   text-decoration: none;
+}
+
+.horizontal-scrollbar-container {
+  position: relative;
+  margin-bottom: 30px; /* Add some margin to create space for the arrows below the scrollbar */
 }
 
 .right-arrow,
@@ -30,14 +35,18 @@ a{
   font-size: 25px;
   border-radius: 4px;
   position: absolute;
-  bottom: -20px;
-  right: 80px;
+  top: 100%; /* Position the arrows below the scrollbar */
+  left: 52%;
   transform: scale(1, 1);
   transition: 0.3s all ease-in-out;
 }
 
 .right-arrow {
   right: 140px;
+}
+.right-arrow {
+  left: auto;
+  right: 52%; /* Position the right arrow to the right of the scrollbar */
 }
 
 .right-arrow:hover,
